@@ -1,0 +1,14 @@
+{
+    "C1": {
+        "name": "Local Context",
+        "operation": "Crop 10%-90% and resize to 224x224"
+    },
+    "C2": {
+        "name": "Original Context",
+        "operation": "Original image resized to 224x224"
+    },
+    "C3": {
+        "name": "Expanded Context",
+        "operation": "Expanded canvas followed by resize"
+    }
+}
