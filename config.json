@@ -11,10 +11,10 @@
         0.225
     ],
     "models": {
-        "C1": "models/MobileNetV3_C1.pth",
-        "C2": "models/MobileNetV3_C2.pth",
-        "C3": "models/MobileNetV3_C3.pth",
-        "ResNet18": "models/ResNet18.pth"
+        "C1": "MobileNetV3_C1.pth",
+        "C2": "MobileNetV3_C2.pth",
+        "C3": "MobileNetV3_C3.pth",
+        "ResNet18": "ResNet18.pth"
     },
     "contexts": {
         "C1": {
