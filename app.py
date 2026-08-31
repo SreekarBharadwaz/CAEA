@@ -466,21 +466,15 @@ def gradcam(model, x, class_idx):
 # GRAD-CAM OVERLAY
 # ============================================================
 
-def overlay_cam(
-    image: Image.Image,
-    cam: np.ndarray
-) -> Image.Image:
-
+def overlay_cam(image: Image.Image, cam: np.ndarray) -> Image.Image:
     base = np.asarray(
         image.convert("RGB").resize((224, 224)),
         dtype=np.float32
     ) / 255.0
 
-    import matplotlib.cm as cm
+    import matplotlib
 
-    heat = cm.get_cmap("jet")(
-        cam
-    )[..., :3].astype(
+    heat = matplotlib.colormaps["jet"](cam)[..., :3].astype(
         np.float32
     )
 
@@ -491,9 +485,7 @@ def overlay_cam(
     )
 
     return Image.fromarray(
-        (overlay * 255).astype(
-            np.uint8
-        )
+        (overlay * 255).astype(np.uint8)
     )
 
 
